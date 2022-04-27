@@ -42,7 +42,7 @@ const addTask = () => {
     list.innerHTML = `
     <input type="checkbox" onclick="todoComplete(this)" class="check">
     <input type="text" value="${inputForm.value}" onfocus="getCurrentTodo(this)" onblur="editTodo(this)">
-    <i class="fa fa-trash onclick="removeTodo(this)"></i>
+    <i class="fa fa-trash" onclick="removeTodo(this)"></i>
     `;
     listParent.insertBefore(list, listParent.children[0]);
     inputForm.value = ""; // Con esto, limpio el "form".
@@ -66,7 +66,7 @@ const loadTasks = () => {
           todo.completed ? "checked" : ""
         }">
         <input type="text" value="${todo.todos}" onfocus="getCurrentTodo(this)" onblur="editTodo(this)">
-        <i class="fa fa-trash onclick="removeTodo(this)"></i>
+        <i class="fa fa-trash" onclick="removeTodo(this)"></i>
         `;
         listParent.insertBefore(list, listParent.children[0]);
     });
